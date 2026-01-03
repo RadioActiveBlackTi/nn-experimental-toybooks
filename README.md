@@ -22,6 +22,8 @@ In this notebook `01-gcn-oversmoothings.ipynb`, I worked on CORA for inspecting 
 
 **[GREAD: Reaction-Diffusion based GNN](https://arxiv.org/abs/2211.14208)**
 
+---
+
 
 ### 02. [Flow Model and Rectified Flow](./02-flow-and-rectification.ipynb)
 
@@ -40,6 +42,8 @@ In this notebook `02-flow-and-rectification.ipynb`, first worked on gaussian-to-
 **[FFJORD: Free Form CNF model](https://arxiv.org/abs/1810.01367)**
 
 **[Rectified Flow: Flow Straight and Fast](https://arxiv.org/abs/2209.03003)**
+
+---
 
 ### 03. [Meta Optimization and Meta-LoRA](./03-meta-optimization-lora.ipynb)
 
