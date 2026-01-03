@@ -27,6 +27,12 @@ In this notebook `01-gcn-oversmoothings.ipynb`, I worked on CORA for inspecting 
 
 Although flow-based model's concept is very nice and intuitive, it's early phase's obstacle was calculation of Jacobians for calculating log likelihood. FFJORD solved network constraints by applying Hutchinson estimator for Jacobian Trace calculation. Further, it is also found that the intuitive approach that connects start point to end point works well, even leading reasonable one-step generation.
 
+<div align=center>
+   <img src="./assets/02/ffjord.gif" width="200">
+   <img src="./assets/02/reflow.gif" width="200">
+   <img src="./assets/02/reflow2.gif" width="200">
+</div>
+
 In this notebook `02-flow-and-rectification.ipynb`, first worked on gaussian-to-swiss-roll generation using FFJORD, and applied reflow algorithms for the flow model.
 
 <h3>Reference works</h3>
