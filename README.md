@@ -45,6 +45,26 @@ In this notebook `02-flow-and-rectification.ipynb`, first worked on gaussian-to-
 
 ---
 
-### 03. [Meta Optimization and Meta-LoRA](./03-meta-optimization-lora.ipynb)
+### 03. [Meta Optimization](./03-meta-optimization.ipynb)
+
+Meta-learning is a methodology for finding versatile initialization point that can quickly adapt to any few-shot task only with a few gradient steps. While MAML suggested fundamental and model-agnostic way as its name, it has crucial overhead of calculating second-order Hessian. So in Reptile, rather than using gradient descent for inner loop gradient steps, it updates the initialization simply towards the fine-tuned weights.
+
+<div align=center>
+    <img src="./assets/03/base.gif" width="200">
+    <img src="./assets/03/maml.gif" width="200">
+    <img src="./assets/03/reptile.gif" width="200">
+</div>
+
+In this notebook `03-meta-optimization.ipynb`, I worked for simple sine regression tasks for baseline pre-trained MLP, MAML, and Reptile.
+
+<h3>Reference works</h3>
+
+**[MAML: Model-Agnostic Meta Learning](https://arxiv.org/abs/1703.03400)**
+
+**[Reptile: First-Order Fast approximation of MAML](https://arxiv.org/abs/1803.02999)**
+
+---
+
+### 04. [Score Matching: Sampling and Guidance]()
 
 TBD
