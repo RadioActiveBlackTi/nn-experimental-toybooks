@@ -6,7 +6,7 @@
 </div>
 
 ## 🔎 About this repo
-This repository is a collection of my toy experiments for various deep learning topics. Each idea is within each one Jupyter notebook.
+This repository is a collection of my toy experiments for various deep learning topics. Each idea is within each one Jupyter notebook. All notebooks are based on Colab environment.
 
 ## 🧪 Experiment Lists
 
@@ -15,7 +15,7 @@ This repository is a collection of my toy experiments for various deep learning 
 | **01** | **[GCN & Oversmoothing](#01-gcn-and-oversmoothings)** | Graph Neural Networks, Oversmoothing, DeepGCNs | [🚀](./01-gcn-oversmoothings.ipynb) |
 | **02** | **[Flow & Rectified Flow](#02-flow-model-and-rectified-flow)** | CNF, FFJORD, Rectified Flow, ODE | [🚀](./02-flow-and-rectification.ipynb) |
 | **03** | **[Meta Optimization](#03-meta-optimization)** | Meta-Learning, MAML, Reptile, Few-shot | [🚀](./03-meta-optimization.ipynb) |
-| **04** | **[Score Matching](#04-score-matching-sampling-and-guidance)** | NCSN, DDPM, DDIM, CFG, Langevin | [🚧](./04-score-sampling-guidance.ipynb) |
+| **04** | **[Score Matching](#04-score-matching-sampling-and-guidance)** | NCSN, DDPM, DDIM, CFG | [🚀](./04-score-sampling-guidance.ipynb) |
 
 <br>
 
@@ -76,4 +76,22 @@ In this notebook `03-meta-optimization.ipynb`, I worked for simple sine regressi
 
 ### 04. [Score Matching: Sampling and Guidance](./04-score-sampling-guidance.ipynb)
 
-TBD
+The concept of Stochastic Differential Equations can generalize generative models through diffusion process, such as NCSN, DDPM, and DDIM, with different diffusion terms and drift terms. Such unification brought very natural guidance techniques using the property of scores.  
+
+<div align=center>
+    <img src="./assets/04/ncsn.gif" width="200">
+    <img src="./assets/04/ddim.gif" width="200">
+    <img src="./assets/04/cfg.gif" width="200">
+</div>
+
+In this notebook `04-score-sampling-guidance.ipynb`, using simple score matching network, I tried with different trajectories but comparable sample quality. Plus, guidance techniques like classifier guidance and CFG are also tested on DDIM sampler.
+
+<h3>Reference works</h3>
+
+**[Score-based Generative Modeling through SDE](https://arxiv.org/abs/2011.13456)**
+
+**[DDIM: Denoising Diffusion Implicit Models](https://arxiv.org/pdf/2010.02502)**
+
+**[Classifier Guidance: Diffusion Beats GAN](https://arxiv.org/abs/2105.05233)**
+
+**[Classifier-Free Guidance](https://arxiv.org/abs/2207.12598)**
