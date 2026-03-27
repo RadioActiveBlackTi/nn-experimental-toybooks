@@ -16,7 +16,7 @@ This repository is a collection of my toy experiments for various deep learning 
 | **02** | **[Flow & Rectified Flow](#02-flow-model-and-rectified-flow)** | CNF, FFJORD, Rectified Flow, ODE | [🚀](./02-flow-and-rectification.ipynb) |
 | **03** | **[Meta Optimization](#03-meta-optimization)** | Meta-Learning, MAML, Reptile, Few-shot | [🚀](./03-meta-optimization.ipynb) |
 | **04** | **[Score Matching](#04-score-matching-sampling-and-guidance)** | NCSN, DDPM, DDIM, CFG | [🚀](./04-score-sampling-guidance.ipynb) |
-| **05** | **[Point Cloud Autoencoder](#04-point-cloud-autoencoder)** | TBD | [🚧](05-point-cloud-autoencoder.ipynb) |
+| **05** | **[Point Cloud Autoencoder](#05-point-cloud-autoencoder)** | TBD | [🚧](05-point-cloud-autoencoder.ipynb) |
 
 <br>
 
