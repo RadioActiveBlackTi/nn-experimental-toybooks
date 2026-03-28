@@ -50,7 +50,7 @@ Usage example:
 | **02** | **[Flow & Rectified Flow](#02-flow-model-and-rectified-flow)** ![Generative][tag-generative] ![Neural ODE][tag-node] | CNF, FFJORD, Rectified Flow, ODE | [🚀](./02-flow-and-rectification.ipynb) |
 | **03** | **[Meta Optimization](#03-meta-optimization)** ![Representation Learning][tag-replearn] | Meta-Learning, MAML, Reptile, Few-shot | [🚀](./03-meta-optimization.ipynb) |
 | **04** | **[Score Matching](#04-score-matching-sampling-and-guidance)** ![Generative][tag-generative] ![Diffusion][tag-diffusion] | NCSN, DDPM, DDIM, CFG | [🚀](./04-score-sampling-guidance.ipynb) |
-| **05** | **[Point Cloud Autoencoder](#05-point-cloud-autoencoder)** ![3D][tag-3d] ![Generative][tag-generative] | TBD | [🚧](./05-point-cloud-autoencoder.ipynb) |
+| **05** | **[Point Cloud Autoencoder](#05-point-cloud-autoencoder)** ![3D][tag-3d] ![Generative][tag-generative] | Point Cloud, PointNet, VAE, PointGMM | [🚀](./05-point-cloud-autoencoder.ipynb) |
 
 <br>
 
@@ -140,4 +140,20 @@ In this notebook `04-score-sampling-guidance.ipynb`, using simple score matching
 ### 05. [Point Cloud Autoencoder](./05-point-cloud-autoencoder.ipynb)
 ![3D][tag-3d-big] ![Generative][tag-generative-big]
 
-TBD
+Point cloud is a common output form of many 3D scanners. As PointNet suggested a high-quality point cloud encoder that can capture 3D global structures, it is natural to think of autoencoder on point cloud space, even variational ones too. One naive approach would be representing reconstruction term as just Chamfer Distance or other point cloud distance metrics; which is actually not strictly satisfies ELBO. The other one that uses GMM can capture exact reconstruction term and has a lot of usages like unsupervised segmentation, as it can explicitly predict the distributions of points.
+
+<div align=center>
+    <img src="./assets/05/tnet.png" width="200">
+    <img src="./assets/05/pvae_interpolation.png" width="200">
+    <img src="./assets/05/pgmm.png" width="200">
+</div>
+
+In this notebook `05-point-cloud-autoencoder.ipynb`, I tested with PointNet encoders, naive MLP decoders, and Hierachical Split decoders for autoencoding tasks. Plus, you can investigate how T-net works on PointNet encoder, how GMM component of PointGMM is shaped on 3D space, and how unsupervised clustering (point segmentation) works on 3D point cloud domain.
+
+<h3>Reference works</h3>
+
+**[PointNet](https://arxiv.org/abs/1612.00593)**
+
+**[Point Cloud Generation](https://arxiv.org/abs/1707.02392)**
+
+**[PointGMM: Point Cloud GMM Networks](https://arxiv.org/abs/2003.13326)**
