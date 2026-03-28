@@ -54,7 +54,7 @@ Usage example:
 
 <br>
 
-### 01. [GCN and Oversmoothings](./01-gcn-oversmoothings.ipynb)
+### 01. [GCN and Oversmoothings](./01-gcn-oversmoothings/README.md)
 ![GNN][tag-gnn-big]
 
 In general, it is know that GCN cannot be stacked deeply since neighborhood aggregation works as a low-pass filter. On the other hand, Transformers can be stacked deeply although self-attention is equivalent to GCN on complete graph; thanks to normalizations and residual connections.
@@ -70,7 +70,7 @@ In this notebook `01-gcn-oversmoothings.ipynb`, I worked on CORA for inspecting 
 ---
 
 
-### 02. [Flow Model and Rectified Flow](./02-flow-and-rectification.ipynb)
+### 02. [Flow Model and Rectified Flow](./02-flow-and-rectification/README.md)
 ![Generative][tag-generative-big] ![Neural ODE][tag-node-big]
 
 Although flow-based model's concept is very nice and intuitive, it's early phase's obstacle was calculation of Jacobians for calculating log likelihood. FFJORD solved network constraints by applying Hutchinson estimator for Jacobian Trace calculation. Further, it is also found that the intuitive approach that connects start point to end point works well, even leading reasonable one-step generation.
