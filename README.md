@@ -20,6 +20,7 @@ This repository is a collection of my toy experiments for various deep learning 
 [tag-replearn]: https://img.shields.io/badge/Representation_Learning-10B981?style=flat-square
 [tag-node]: https://img.shields.io/badge/Neural_ODE-F59E0B?style=flat-square
 [tag-diffusion]: https://img.shields.io/badge/Diffusion-14B8A6?style=flat-square
+
 [tag-gnn-big]: https://img.shields.io/badge/GNN-3B82F6?style=for-the-badge
 [tag-3d-big]: https://img.shields.io/badge/3D-8B5CF6?style=for-the-badge
 [tag-replearn-big]: https://img.shields.io/badge/Representation_Learning-10B981?style=for-the-badge
