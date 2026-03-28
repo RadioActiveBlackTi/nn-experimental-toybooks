@@ -91,7 +91,7 @@ In this notebook `02-flow-and-rectification.ipynb`, first worked on gaussian-to-
 
 ---
 
-### 03. [Meta Optimization](./03-meta-optimization.ipynb)
+### 03. [Meta Optimization](./03-meta-optimization/README.md)
 ![Representation Learning][tag-replearn-big]
 
 Meta-learning is a methodology for finding versatile initialization point that can quickly adapt to any few-shot task only with a few gradient steps. While MAML suggested fundamental and model-agnostic way as its name, it has crucial overhead of calculating second-order Hessian. So in Reptile, rather than using gradient descent for inner loop gradient steps, it updates the initialization simply towards the fine-tuned weights.
@@ -112,7 +112,7 @@ In this notebook `03-meta-optimization.ipynb`, I worked for simple sine regressi
 
 ---
 
-### 04. [Score Matching: Sampling and Guidance](./04-score-sampling-guidance.ipynb)
+### 04. [Score Matching: Sampling and Guidance](./04-score-sampling-guidance/README.md)
 ![Generative][tag-generative-big] ![Diffusion][tag-diffusion-big]
 
 The concept of Stochastic Differential Equations can generalize generative models through diffusion process, such as NCSN, DDPM, and DDIM, with different diffusion terms and drift terms. Such unification brought very natural guidance techniques using the property of scores.  
@@ -137,7 +137,7 @@ In this notebook `04-score-sampling-guidance.ipynb`, using simple score matching
 
 ---
 
-### 05. [Point Cloud Autoencoder](./05-point-cloud-autoencoder.ipynb)
+### 05. [Point Cloud Autoencoder](./05-point-cloud-autoencoder/README.md)
 ![3D][tag-3d-big] ![Generative][tag-generative-big]
 
 Point cloud is a common output form of many 3D scanners. As PointNet suggested a high-quality point cloud encoder that can capture 3D global structures, it is natural to think of autoencoder on point cloud space, even variational ones too. One naive approach would be representing reconstruction term as just Chamfer Distance or other point cloud distance metrics; which is actually not strictly satisfies ELBO. The other one that uses GMM can capture exact reconstruction term and has a lot of usages like unsupervised segmentation, as it can explicitly predict the distributions of points.
