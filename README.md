@@ -46,11 +46,12 @@ Usage example:
 
 | Index | Experiment Topic | Key Concepts & Papers | Link |
 | :---: | :--- | :--- | :---: |
-| **01** | **[GCN & Oversmoothing](#01-gcn-and-oversmoothings)**  ![GNN][tag-gnn] | Graph Neural Networks, Oversmoothing, DeepGCNs | [🚀](./01-gcn-oversmoothings.ipynb) |
-| **02** | **[Flow & Rectified Flow](#02-flow-model-and-rectified-flow)** ![Generative][tag-generative] ![Neural ODE][tag-node] | CNF, FFJORD, Rectified Flow, ODE | [🚀](./02-flow-and-rectification.ipynb) |
-| **03** | **[Meta Optimization](#03-meta-optimization)** ![Representation Learning][tag-replearn] | Meta-Learning, MAML, Reptile, Few-shot | [🚀](./03-meta-optimization.ipynb) |
-| **04** | **[Score Matching](#04-score-matching-sampling-and-guidance)** ![Generative][tag-generative] ![Diffusion][tag-diffusion] | NCSN, DDPM, DDIM, CFG | [🚀](./04-score-sampling-guidance.ipynb) |
-| **05** | **[Point Cloud Autoencoder](#05-point-cloud-autoencoder)** ![3D][tag-3d] ![Generative][tag-generative] | Point Cloud, PointNet, VAE, PointGMM | [🚀](./05-point-cloud-autoencoder.ipynb) |
+| **01** | **[GCN & Oversmoothing](#01-gcn-and-oversmoothings)**  ![GNN][tag-gnn] | Graph Neural Networks, Oversmoothing, DeepGCNs | [🚀](./01-gcn-oversmoothings/01-gcn-oversmoothings.ipynb) |
+| **02** | **[Flow & Rectified Flow](#02-flow-model-and-rectified-flow)** ![Generative][tag-generative] ![Neural ODE][tag-node] | CNF, FFJORD, Rectified Flow, ODE | [🚀](./02-flow-and-rectification/02-flow-and-rectification.ipynb) |
+| **03** | **[Meta Optimization](#03-meta-optimization)** ![Representation Learning][tag-replearn] | Meta-Learning, MAML, Reptile, Few-shot | [🚀](./03-meta-optimization/03-meta-optimization.ipynb) |
+| **04** | **[Score Matching](#04-score-matching-sampling-and-guidance)** ![Generative][tag-generative] ![Diffusion][tag-diffusion] | NCSN, DDPM, DDIM, CFG | [🚀](./04-score-sampling-guidance/04-score-sampling-guidance.ipynb) |
+| **05** | **[Point Cloud Autoencoder](#05-point-cloud-autoencoder)** ![3D][tag-3d] ![Generative][tag-generative] | Point Cloud, PointNet, VAE, PointGMM | [🚀](./05-point-cloud-autoencoder/05-point-cloud-autoencoder.ipynb) |
+| **06** | **[Flow Maps](#06-flow-maps)** ![Generative][tag-generative] | Flow Map, Consistency Model, Adaptive Weighting, Self-distillation | [🚀](./06-flow-map-consistency/06-flow-map-consistency.ipynb) |
 
 <br>
 
@@ -157,3 +158,25 @@ In this notebook `05-point-cloud-autoencoder.ipynb`, I tested with PointNet enco
 **[Point Cloud Generation](https://arxiv.org/abs/1707.02392)**
 
 **[PointGMM: Point Cloud GMM Networks](https://arxiv.org/abs/2003.13326)**
+
+---
+
+### 06. [Flow Maps](./06-flow-map-consistency/README.md)
+![Generative][tag-generative-big]
+
+Theoretically, Straight Flow can leverage one-step generation. However, due to truncation errors with one-step generation, commonly flow models needed to solve multi-step ODE for quality. However, Consistency Models and Flow Maps improved such downsides of flow models so that the model can efficiently learn transport and further just sample by current timestamp and target timestamp with initial noise.
+
+<div align=center>
+    <img src="./assets/06/straight.gif" width="200">
+    <img src="./assets/06/flowmap.gif" width="200">
+</div>
+
+In this notebook `06-flow-map-consistency`, I tested with generating checkboard dataset by first baseline straight flow model, Flow Map distillated with Lagrangian Loss, Flow Map further distillated with Progressive Flow Map Distillation and directly learning flow map via self-distillation.
+
+<h3>Reference works</h3>
+
+**[Consistency Models](https://arxiv.org/abs/2303.01469)**
+
+**[Flow Map Matching](https://arxiv.org/abs/2406.07507)**
+
+**[How to build a Consistency Model](https://arxiv.org/abs/2505.18825)**
