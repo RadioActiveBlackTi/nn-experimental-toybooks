@@ -187,7 +187,7 @@ In this notebook `06-flow-map-consistency`, I tested with generating checkboard 
 
 ---
 
-### 06. [Categorical Flow](./07-categorical-flow/README.md)
+### 07. [Categorical Flow](./07-categorical-flow/README.md)
 ![Diffusion][tag-diffusion-big] ![Language][tag-language-big]
 
 Applying Diffusion models to language modeling is typically handled as two types: the first one is on discrete transition of tokens (e.g. D3PM, SEDD) and the other is defining diffusion of tokens on continuous space which can be embedding space or flow into simplex space. In latter approach, it is known that it would be highly beneficial to adapt time reparameterization or time warping such that time steps are concentrated on some late time regions which has large decoding rate decrease.
