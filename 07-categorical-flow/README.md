@@ -1,4 +1,4 @@
-# 05. [Categorical Flow](./07-categorical-flow)
+# 07. [Categorical Flow](./07-categorical-flow)
 
 Subproject notes only. See the main README for full project context.
 
