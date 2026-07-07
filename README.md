@@ -20,6 +20,7 @@ This repository is a collection of my toy experiments for various deep learning 
 [tag-replearn]: https://img.shields.io/badge/Representation_Learning-10B981?style=flat-square
 [tag-node]: https://img.shields.io/badge/Neural_ODE-F59E0B?style=flat-square
 [tag-diffusion]: https://img.shields.io/badge/Diffusion-14B8A6?style=flat-square
+[tag-language]: https://img.shields.io/badge/Language-F06448?style=flat-square
 
 [tag-gnn-big]: https://img.shields.io/badge/GNN-3B82F6?style=for-the-badge
 [tag-3d-big]: https://img.shields.io/badge/3D-8B5CF6?style=for-the-badge
@@ -27,6 +28,8 @@ This repository is a collection of my toy experiments for various deep learning 
 [tag-node-big]: https://img.shields.io/badge/Neural_ODE-F59E0B?style=for-the-badge
 [tag-diffusion-big]: https://img.shields.io/badge/Diffusion-14B8A6?style=for-the-badge
 [tag-generative-big]: https://img.shields.io/badge/Generative-6366F1?style=for-the-badge
+[tag-language-big]: https://img.shields.io/badge/Language-F06448?style=for-the-badge
+
 
 <!--
 Spare tag color palette (hex)
@@ -51,7 +54,8 @@ Usage example:
 | **03** | **[Meta Optimization](#03-meta-optimization)** ![Representation Learning][tag-replearn] | Meta-Learning, MAML, Reptile, Few-shot | [🚀](./03-meta-optimization/03-meta-optimization.ipynb) |
 | **04** | **[Score Matching](#04-score-matching-sampling-and-guidance)** ![Generative][tag-generative] ![Diffusion][tag-diffusion] | NCSN, DDPM, DDIM, CFG | [🚀](./04-score-sampling-guidance/04-score-sampling-guidance.ipynb) |
 | **05** | **[Point Cloud Autoencoder](#05-point-cloud-autoencoder)** ![3D][tag-3d] ![Generative][tag-generative] | Point Cloud, PointNet, VAE, PointGMM | [🚀](./05-point-cloud-autoencoder/05-point-cloud-autoencoder.ipynb) |
-| **06** | **[Flow Maps](#06-flow-maps)** ![Generative][tag-generative] | Flow Map, Consistency Model, Adaptive Weighting, Self-distillation | [🚀](./06-flow-map-consistency/06-flow-map-consistency.ipynb) |
+| **06** | **[Flow Maps](#06-flow-maps)** ![Generative][tag-generative] ![Diffusion][tag-diffusion] | Flow Map, Consistency Model, Adaptive Weighting, Self-distillation | [🚀](./06-flow-map-consistency/06-flow-map-consistency.ipynb) |
+| **07** | **[Categorical Flow](#06-flow-maps)** ![Diffusion][tag-diffusion] ![Language][tag-language] | Continuous Flow for Categorical Data, Diffusion for LM, time reparameterization | [🚀](./07-categorical-flow/07-categorical-flow.ipynb) |
 
 <br>
 
@@ -180,3 +184,27 @@ In this notebook `06-flow-map-consistency`, I tested with generating checkboard 
 **[Flow Map Matching](https://arxiv.org/abs/2406.07507)**
 
 **[How to build a Consistency Model](https://arxiv.org/abs/2505.18825)**
+
+---
+
+### 06. [Categorical Flow](./07-categorical-flow/README.md)
+![Diffusion][tag-diffusion-big] ![Language][tag-language-big]
+
+Applying Diffusion models to language modeling is typically handled as two types: the first one is on discrete transition of tokens (e.g. D3PM, SEDD) and the other is defining diffusion of tokens on continuous space which can be embedding space or flow into simplex space. In latter approach, it is known that it would be highly beneficial to adapt time reparameterization or time warping such that time steps are concentrated on some late time regions which has large decoding rate decrease.
+
+<div align=center>
+    <img src="./assets/07/text.png" width="300">
+</div>
+
+<div align=center>
+    <img src="./assets/07/uniform.png" width="250">
+    <img src="./assets/07/reparam.png" width="250">
+</div>
+
+In this notebook `07-categorical-flow.ipynb`, I used mini English-like syntax & semantic sets for dataset and trained Flow Langauge Model with uniform time step option and reparameterized time step option. Then I compared both approaches' Syntax accuracy, Semantic accuracy and Conditional Semantic accuracy (Semantic accuracy for sentences whose syntax is correct). Notably, only syntax accuracy increased a lot on reparameterized time step setting, with all accuracy's increasing transition point got ealier than uniform time step setting: suggesting that good time reparameterization would focus on concrete and fast syntax refinement.
+
+<h3>Reference works</h3>
+
+**[Continuous Diffusion for Categorical Data (CDCD)](https://arxiv.org/abs/2211.15089)**
+
+**[Flow Map Language Models](https://arxiv.org/abs/2602.16813)**
